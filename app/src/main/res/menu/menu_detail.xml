@@ -3,8 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.mylasttest.DetailActivity">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+        android:id="@+id/menu_share"
+        android:title="공유"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/menu_alarm"
+        android:title="알람설정"
+        android:icon="@drawable/ic_share"
+        app:showAsAction="never"
+        />
 </menu>
