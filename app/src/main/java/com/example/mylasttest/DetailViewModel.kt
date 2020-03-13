@@ -4,11 +4,12 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.mylasttest.data.MemoData
 import io.realm.Realm
+import java.util.*
 
 class DetailViewModel: ViewModel(){
     val title: MutableLiveData<String> = MutableLiveData<String>().apply{value = ""}
     val content: MutableLiveData<String> = MutableLiveData<String>().apply{value = ""}
-
+    val alarmTime: MutableLiveData<Date> = MutableLiveData<Date>().apply{value = Date(0)}
     private var memoData = MemoData()
 
     private val realm: Realm by lazy{
@@ -28,10 +29,11 @@ class DetailViewModel: ViewModel(){
         memoData = memoDao.selectMemo(id)
         title.value = memoData.title
         content.value = memoData.content
+        alarmTime.value = memoData.alarmTime
     }
 
-    fun addOrUpdateMemo(title: String, content: String){
-        memoDao.addOrUpdateMemo(memoData, title, content)
-    }
+//    fun addOrUpdateMemo(title: String, content: String){
+//        memoDao.addOrUpdateMemo(memoData, title, content)
+//    }
 
 }
