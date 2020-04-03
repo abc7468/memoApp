@@ -14,4 +14,9 @@
         android:icon="@drawable/ic_share"
         app:showAsAction="never"
         />
+    <item
+        android:id="@+id/menu_location"
+        android:title = "위치설정"
+        app:showAsAction="never"
+        />
 </menu>
